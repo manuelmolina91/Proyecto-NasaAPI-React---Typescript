@@ -26,11 +26,8 @@ const theme = {
       white500: '#C4C4C4',
       white700: '#BCC6CC',
       red100: '#E53935',
-      pink100: '##f72faa',
-      yellow: 'rgb(254, 153, 1)'
-
-
-
+      pink100: '#f72faa',
+      ReactBlue:'#282c34'
     },
   }
 
