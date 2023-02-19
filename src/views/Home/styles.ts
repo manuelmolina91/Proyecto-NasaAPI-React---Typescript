@@ -15,12 +15,9 @@ export const App = styled.div`
 export const Container = styled.div`
 padding: 5em;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 gap: 24px;
 `
 
 export const Description = styled.p`
-`
-
-export const Image = styled.image`
 `

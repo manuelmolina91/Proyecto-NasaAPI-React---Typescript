@@ -13,7 +13,7 @@ import {
 } from "./styles";
 import { Formik, Field } from "formik";
 import { initialValues, validationSchema } from "./constants";
-// import { BackButton } from '../../../components/Navbar/styles'
+import { BackButton } from '../../../components/navbar/styles'
 import { setToken } from "../../../services/storage";
 import { login } from "../../../services/api/auth";
 
@@ -62,7 +62,7 @@ const LoginForm: FC = () => {
             )}
           </Field>
           <FormButton type="submit">Login</FormButton>
-          {/* <BackButton onClick={goToBack}>🔙</BackButton> */}
+          <BackButton onClick={goToBack}>Back</BackButton>
         </Form>
       </Formik>
     </FormContainer>

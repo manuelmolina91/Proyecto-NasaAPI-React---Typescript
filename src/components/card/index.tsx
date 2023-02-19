@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Container, Description, Image } from './styles'
+import { Container, Description, Image, ButtonDetails } from './styles'
 import {Props} from './types'
 
 const Card:FC<Props> = ({
@@ -21,7 +21,7 @@ const Card:FC<Props> = ({
             <Description>Id: {nasaId}</Description>
             <Description>Sol: {sol}</Description>
             <Image src={image}/>
-            <button onClick={handleClick}>View details</button>
+            <ButtonDetails onClick={handleClick}>View details</ButtonDetails>
         </Container>
     )
 }
