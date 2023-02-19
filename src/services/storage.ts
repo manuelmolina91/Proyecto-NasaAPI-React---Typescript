@@ -1,4 +1,3 @@
-
 export const getToken = () => {
     const token = window.localStorage.getItem('token');
     return token ? JSON.parse(token) :null;

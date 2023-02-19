@@ -2,7 +2,7 @@ import { FC, useCallback } from 'react'
 import { Props } from './types'
 // import { auth } from '../../services/fireabase';
 import { useNavigate } from 'react-router-dom';
-import { BackButton, SignoutButton } from '../../components/navbar/styles'
+import { BackButton, ButtonLogout } from '../../components/navbar/styles'
 import { CustomNavbar } from './styles'
 
 
@@ -14,24 +14,18 @@ const Navbar: FC<Props> = ({type='list'}) => {
     const goToBack = useCallback(() => {
         navigate('/home')
     }, [navigate])
+    
+    const handleLogout = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        window.localStorage.clear()
+        navigate('/login')
+    }, [navigate])
 
-
-    // const handleSignOut = async () => {
-    //     try {
-    //         console.log(auth)
-    //         await auth.signOut();
-    //         console.log(auth)
-    //         window.localStorage.clear()
-    //         navigate('/');
-    //     } catch (error) {
-    //         alert('Algo no fue bien')
-    //     }
-    // };
 
     return (
         <CustomNavbar>
+            <ButtonLogout onClick={handleLogout}>Logout</ButtonLogout>
             {type === 'details' &&<BackButton onClick={goToBack}>🔙</BackButton>}
-            {/* <SignoutButton onClick={handleSignOut}>LogOut</SignoutButton> */}
         </CustomNavbar>
     )
 }

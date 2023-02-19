@@ -5,11 +5,13 @@ import {
   WelcomeButton,
   WelcomeContainer,
   WelcomeMessage,
+  //UniversePicture
 } from './styles'
 
 const Welcome: FC = () => {
     
   return (
+    //<UniversePicture>
     <WelcomeContainer>
       <WelcomeMessage>Welcome to Nasa Web App</WelcomeMessage>
       <RedirectMessage>Please login or create an account to continue</RedirectMessage>
@@ -18,6 +20,7 @@ const Welcome: FC = () => {
       <WelcomeButton to="/signup">Signup</WelcomeButton>
       </ButtonBoxes>
     </WelcomeContainer>
+    //</UniversePicture>
   )
 }
 

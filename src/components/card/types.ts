@@ -7,5 +7,4 @@ export type Props = {
     type?: 'list' | 'details'
      onClick?: (id:string) => void
      id?:string
-    // children?: ReactNode
 }

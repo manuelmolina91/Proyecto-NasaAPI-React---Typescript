@@ -15,6 +15,11 @@ export const BackButton = styled.button`
     cursor:pointer;
     display: block;
     block-size: auto;
+
+    &:hover {
+    background-color: black;
+    color: white;
+  }
 `
 
 export const SignoutButton = styled.button`
@@ -29,4 +34,13 @@ export const SignoutButton = styled.button`
     text-transform: uppercase;
     font-weight:bold;
     cursor:pointer;
+`
+
+export const ButtonLogout = styled.button`
+    cursor: pointer;
+    margin-left: 1440px;
+    border: none;
+    background-color: transparent;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 `

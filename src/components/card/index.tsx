@@ -9,6 +9,7 @@ const Card:FC<Props> = ({
     onClick,
     id
 }) => {
+    
 
     const handleClick = () => {
         if (onClick && id) {
