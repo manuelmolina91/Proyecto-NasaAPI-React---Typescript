@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-//import UniverseImg from '../../assets/planeta-tierra-2873795.webp'
+
 
 export const WelcomeContainer = styled.div`
   display: flex;
@@ -14,14 +14,23 @@ export const WelcomeContainer = styled.div`
 
 export const WelcomeMessage = styled.h1`
     color:${({ theme }) => theme.colors.black};;
+    font-size: xxx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: static;
 `
 
 export const RedirectMessage = styled.p`
-color:${({ theme }) => theme.colors.black};;`
+color:${({ theme }) => theme.colors.black};
+font-size: 25px;
+margin: 70px;
+
+`
 
 export const ButtonBoxes = styled.div`
     display:block;
     margin:20px;
+    border: 3px solid;
+    padding: 30px;
 `
 
 export const WelcomeButton = styled(Link)`
@@ -31,14 +40,3 @@ export const WelcomeButton = styled(Link)`
   text-decoration: none;
   margin: 0 10px;
 `
-
-// export const UniversePicture = styled.div`
-// display: flex;
-// justify-content: center;
-// align-items: center;
-// background-image: url(${UniverseImg});
-// background-repeat: no-repeat;
-// background-size: cover;
-// height: 400px;
-// width: 400px;
-// border-radius: 20px;`

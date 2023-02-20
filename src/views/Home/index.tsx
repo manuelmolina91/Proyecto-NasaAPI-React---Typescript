@@ -6,6 +6,7 @@ import { App, Container } from "./styles";
 
 const Home: FC = () => {
   const [marsList, setMarsList] = useState<Mars[]>([]);
+  const [apodData, setApodData] = useState<any[]>([]); // inicializar la variable apodData como array vacío
 
   const getMarsList = useCallback(async () => {
     const mars = await getMars();
@@ -16,6 +17,12 @@ const Home: FC = () => {
     console.log('entramos')
     getMarsList();
   }, [getMarsList]);
+
+  const onRemove = useCallback((id: number) => {
+
+    setApodData((prev) => prev.filter((mars) => mars.id !== id))
+
+}, [])
 
   return (
     <App>
@@ -28,6 +35,7 @@ const Home: FC = () => {
           nasaId={mars.nasaId} 
           sol={mars.sol}
           image={mars.image}
+          onRemove={onRemove}
         />
       ))}
       </Container>

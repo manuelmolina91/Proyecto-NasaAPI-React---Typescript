@@ -15,9 +15,15 @@ export const App = styled.div`
 export const Container = styled.div`
 padding: 5em;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr;
 gap: 24px;
+
+@media screen and (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
 `
 
 export const Description = styled.p`
 `
+
